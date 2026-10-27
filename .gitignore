@@ -1,0 +1,9 @@
+# UGS source checkout created by the build scripts
+.ugs-build/
+
+# Maven build output
+target/
+
+# OS / editor noise
+.DS_Store
+*.swp
