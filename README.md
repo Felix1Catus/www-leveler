@@ -56,9 +56,11 @@ the same on **Windows** and **Linux** — it's done through the UGS GUI:
 4. Select `dist/WWWLeveler-<version>.nbm` → **Install** → accept the prompts → **restart UGS**.
 5. Open the panel from **Window → Plugins → WWW Leveler**.
 
-> ⚠️ **Version match.** The prebuilt `.nbm` is built against UGS **v2.1.27**. If your UGS is a
-> noticeably different version and refuses to load it, build it yourself against your version
-> (see below) — just change the `TAG` in the build script.
+> ✅ **Compatibility.** The prebuilt `.nbm` is built against UGS **v2.1.27** and its UGS Lib
+> dependency is relaxed to `> 2.0` (it does not pin a build timestamp), so it installs on the
+> official downloadable **2.1.27** release and newer. It does require the NetBeans platform that
+> ships with 2.1.27 (RELEASE290) — so install it on **UGS 2.1.27 or later**. On an older UGS,
+> build it yourself against that version (see below) — just change the `TAG` in the build script.
 
 ---
 

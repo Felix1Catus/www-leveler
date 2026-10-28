@@ -18,6 +18,23 @@
                 <groupId>org.apache.netbeans.utilities</groupId>
                 <artifactId>nbm-maven-plugin</artifactId>
                 <extensions>true</extensions>
+                <configuration>
+                    <!--
+                        Override the auto-generated dependency on ugslib. By default the
+                        nbm plugin pins the sibling module's full spec version, which embeds
+                        this build's timestamp (e.g. 2.0.0.2026.10.27.18.05) and makes the
+                        plugin refuse to load on any UGS built earlier - including the
+                        official downloadable 2.1.27 release. Requiring only "> 2.0" lets it
+                        install on any UGS 2.0.x+ (2.1.27 and newer).
+                    -->
+                    <moduleDependencies>
+                        <dependency>
+                            <id>com.willwinder:ugs-platform-ugslib</id>
+                            <type>spec</type>
+                            <explicitValue>com.willwinder.ugs.platform.ugslib &gt; 2.0</explicitValue>
+                        </dependency>
+                    </moduleDependencies>
+                </configuration>
             </plugin>
         </plugins>
     </build>
